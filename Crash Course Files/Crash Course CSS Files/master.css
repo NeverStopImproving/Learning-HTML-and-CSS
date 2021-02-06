@@ -1,0 +1,124 @@
+/*
+CSS for a specific type of element begins with the element tag name
+inside the curly braces is where the styles will be determined for the elements with that given tag
+in the case below, we are changing the main h1 heading to be blue instead of black
+Styles that are associated with classes will override global tag styles!
+*/
+h1{
+    color: blue;
+}
+
+/*
+the following sets the color of list items in any type of list to the specific rgb combination rather than a preset
+color
+ */
+li{
+    color: rgb(30, 200, 0);
+}
+
+/*
+Colors can also be set using hex values
+ */
+/*p{
+    color: #eab01c;
+}*/
+
+/*
+using rgba allows you to determine both color and transparency. The value of a can span from 0-1 where 0 is completely
+transparent and 1 is completely visible.
+ */
+h4{
+    color: rgba(13, 90, 140, 0.5);
+}
+
+/*
+When setting a background there are many different things that you can do, two of the options are selecting a specific
+color, and using a url to link to a picture / image to use as a background.
+no repeat means that the picture will only show up once.
+ */
+/*
+body{
+    background: gray;
+    background: url("https://images.unsplash.com/photo-1520741412100-24cd6c2832e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f4348fc639aed74754c68db44972844f&auto=format&fit=crop&w=1500&q=80");
+    background-repeat: no-repeat;
+}
+*/
+
+/*
+in order to style specific sections of the website, we can use divs and spans and then set CSS on them. In the case below
+the CSS will be applied to all the div tags on the entire html page. border will not appear without border width and
+border style.
+
+if you want to create a border in a single line, you can write the following CSS
+
+border:red 10px dashed;
+where the properties are color, width, and style.
+ */
+/*div{
+    background: blue;
+    border: orange;
+    border-width: medium;
+    border-style: solid;
+}*/
+
+/*
+the following style for the paragraph tag will be applied to all paragraphs both in and out of the div elements
+ */
+/*p{
+    color: yellow;
+}*/
+
+/*
+the span style will only appear on span tags and will have a red "highlight" background and black font color
+ */
+span{
+    background: red;
+    color: black;
+}
+
+/*
+classes and IDs can be used to style specific sections of HTML code. Classes are used to assign a css style to multiple
+different elements throughout the HTML and IDs are used to apply a style to a single element. IDs should be used for
+unique elements.
+
+When creating styles for classes a "." needs to come before the class name rather than specifying the element that the
+style will be associated with.
+
+When creating a style using the ID attribute you need to use the # followed by the ID name
+ */
+.firstDiv{
+    color: blue;
+}
+
+.secondDiv{
+    background: gray;
+}
+
+#singledout{
+    color: red;
+}
+
+/*
+you can set custom fonts for specific items such as headers, this is shown below. not all font families are supported
+in all OS
+ */
+.fontLectureHeader{
+    font-family: Consolas;
+}
+
+/*
+we can change font size, weight, etc. using the following logic
+ */
+.fontLectureParagraphOne{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.fontLectureParagraphTwo{
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+    text-align: right;
+}

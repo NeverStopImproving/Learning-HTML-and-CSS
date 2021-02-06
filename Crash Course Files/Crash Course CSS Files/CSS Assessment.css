@@ -1,0 +1,27 @@
+body{
+    background: #D3D3D3;
+    font-family: Aldrich;
+}
+
+h1{
+    text-align: center;
+    border: black 4px solid;
+}
+
+h2{
+    color: purple;
+}
+
+input{
+    border: darkblue 5px solid;
+}
+
+#textblock{
+    border: gray 5px solid;
+    width: 800px;
+    height: 400px;
+}
+
+a{
+    color: red;
+}

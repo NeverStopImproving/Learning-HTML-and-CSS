@@ -1,0 +1,421 @@
+<!-- Tells the browser that the following document is an html file. Always should be the first line of an html file-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- mainly contains metadata and links for the html file -->
+<head>
+    <meta charset="UTF-8">
+
+    <!-- the title tag will be what is displayed on the tab that is associated with the html file -->
+    <title>This is the Title</title>
+
+    <!--
+    In order to link the CSS file to the html file we need to use a link tag and reference the stylesheet and
+    the css file that we want to associate with
+    -->
+    <link rel="stylesheet" href="../Crash%20Course%20CSS%20Files/master.css">
+
+</head>
+
+<!-- most of the html tags and code will go here in the body -->
+<body>
+
+    <div class="HtmlBasicTagging">
+        <h1><u>HTML Crash Course Basic Tagging</u></h1>
+        <!-- This is a header tag, this will be displayed as bolder and larger than normal text -->
+        <!-- As the number increases next to the heading, the size of the text gets smaller -->
+        <!-- Headings can go all the way to h6 where h1 and h2 are the most common-->
+        <h1>Heading 1!</h1>
+        <h2>Heading 2!</h2>
+        <h3>Heading 3!</h3>
+        <h6>Heading 6!</h6>
+
+        <!-- Any untagged text in the body will not be formatted in the way in which it will be seen in the editor
+        in the example below, all of the text will be placed together as if there were no new line characters added
+        -->
+        This is some text
+
+        This is more text
+
+        One last line
+
+        <!-- Separation can be created via a paragraph tag instead. These two lines will be formatted as new line text -->
+        <p>Here is some text</p>
+        <p>Even more text</p>
+
+        <!-- If you want to provide filler text for your website, you can use lorem, which places lorem ipsum text -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at consequuntur cupiditate dignissimos est
+            excepturi facilis hic ipsum iure, laborum maiores minus molestias officiis perferendis quod repellendus ullam
+            ut! Aperiam?
+        </p>
+
+        <!--
+        inline tags as seen below allow us to add a tag inside other tags, which can be used for different kinds of
+        formatting. Anything inside a "strong" tag will be bolded. and anything that is between "em" tags will be in italics
+        It should be noted that the "strong" tag and the "b" tag will look identical in the browser, the strong tag allows
+        for semantic meaning to be conveyed. An example would be browser reading software, bold would not mean anything
+        whereas strong would have an emphasis via the reading software.
+        -->
+        <p>New semantics: <strong> strong!</strong> and <em> emphasis! </em> <b>Bold</b> </p>
+
+    </div>
+
+    <hr>
+
+    <div class="HtmlLists">
+        <h1><u>HTML Crash Course Lists</u></h1>
+        <!--
+        There are two types of lists in html, unordered and ordered. These lists are represented using the tags
+        <ul> and <ol> respectively. unordered lists will be displayed as bullet points, and an ordered list will be
+        displayed as a numbered list
+        -->
+
+        <!--
+        An ordered list will look like the following. Each new list item denoted by <li> tags will be displayed as a new
+        number of the list. For the example below, that would look like 1, 2, 3,... etc.
+        This number scheme is able to be changed via CSS
+        -->
+        <ol>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+        </ol>
+
+        <!--
+        An unordered list will look like the following. Each new list item denoted by <li> will be displayed as a new bullet
+        point of the list.
+        -->
+        <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+        </ul>
+
+        <!--
+        Lists can also be nested if it is required to do so. A nested list would look something like the following.
+        HTML will automatically perform an indentation on the nested portion of the list.
+        It is not common to have this many nested lists placed together
+        -->
+        <ol>
+            <li>Item one</li>
+            <li>Item two</li>
+            <ul>
+                <li>I am nested</li>
+                <li>Second nested item</li>
+                <ul>
+                    <li>Too many nests</li>
+                </ul>
+            </ul>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="DivsAndSpans">
+        <h1><u>HTML Crash Course Divs and Spans</u></h1>
+        <!--
+        Divs and spans allow for segmentation of different portions of the HTML. This allows for styling of specific
+        portions of the HTML code
+        -->
+
+        <!--
+        Given a div element without a class, the formatting and tags encompassed in the div will not look any different than
+        they would normally look without being encompassed by a div tag. However, when a class name has been added to the
+        div tag, CSS can be used to style the elements of that class specifically to look a particular way
+        The div tag should be used on larger divisions of html sections
+        -->
+        <div class="">
+            <h1>Heading!</h1>
+            <p>Some Stuff</p>
+        </div>
+
+        <!--
+        If we want to apply styling to smaller portions of HTML such as the "some text" in the below paragraph
+        we can use a span tag. "some text" can then be styled using CSS and associating a class name with the given span
+        tag.
+
+        If you want to edit something that is already encompassed in tags, then you will be using span.
+        -->
+        <p>Here is <span>some text</span>. Woohoo!</p>
+    </div>
+
+    <hr>
+
+    <div class="Attributes">
+        <h1><u>HTML Crash Course Attributes</u></h1>
+        <!--
+        Some HTML tags have attributes associated with them that you can directly change. Examples would be adding a link
+        or source to an image on an HTML page
+        -->
+
+        <!--
+        You can link images in your HTML using the img self closing tag this means that there is no corresponding
+        closing tag i.e. </img>. The src is the source for the image. In the example below, the address to a picture
+        is used as the source for the image
+        -->
+        <h2>Linked Image Source</h2>
+        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVwcHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+        alt="Image Not Found">
+
+        <!--
+        In order to reference an image using a local source you need to save the image and give it a name. now we can link
+        to the image locally. most images will be stored locally. "alt" allows you to show something in case the source
+        cannot be found.
+        -->
+        <h2>Locally Stored Image</h2>
+        <img src="../puppy.jpg" alt="Image Not Found">
+
+        <!--
+        You can use an anchor tag, <a> that will allow you to display a hyperlink to another website.
+        href is the location that the link will take you to. This can be either another html file that is stored on the
+        web server, or another website that is not hosted on the web server.
+        -->
+        <a href="Different.html">My Link Here</a>
+
+    </div>
+
+    <hr>
+
+    <div class="HtmlFirstAssessment">
+
+        <h1>HTML First Assessment</h1>
+        <a href="HTML%20Assessment%20One.html">Link to first assessment page</a>
+
+    </div>
+
+    <hr>
+
+    <div class="HtmlFormsBasics">
+
+        <h1><u>HTML Forms Basics</u></h1>
+
+        <!--
+        Forms allow for basic user input, the majority of websites would require that user input be allowed and
+        therefore HTML forms are a very important part of website building.
+        A form is set up using the <form> tag
+        <input> tags are then used to accept user input
+        Every major form element already has a corresponding input tag attribute
+        At the end of the form we need to add a "submit" input type to add a button for form submission
+        -->
+        <form>
+
+            <h1>Log in</h1>
+            <h2>Please input your email and password: </h2>
+
+            <!--
+            The type attribute in an input tag tells the browser what type of input that it should be expecting this
+            field to take in and needs to be rendered.
+
+            Value will be the value typed in by the user upon submitting the form
+            Name is the identifier of the value that is being passed
+
+            When using the submit input type, the Value field will be the text displayed in the submit button that
+            will appear on the screen to the user.
+
+            When using special input types like "email", the field will validate input that the user enters without
+            any extra work. Meaning in the case of email, if the user does not enter in a valid email address, the form
+            will not allow submission
+            -->
+            <input
+                    type="email"
+                    name=""
+                    value=""
+            >
+            <input
+                    type="password"
+                    name=""
+                    value=""
+            >
+            <input type="submit"
+                   name=""
+                   value="Submit"
+            >
+
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div class="HTMLFormsLabels">
+
+        <h1><u>HTML Forms Labels</u></h1>
+
+        <!--
+        The action attribute should be thought of as a redirect. This is essentially asking where to go when the form
+        has been submitted.
+        -->
+        <form action="http:\\www.google.com" method="get">
+
+            <!--
+            In order to add labels for inputs, we can use a label tag
+            the "for" attribute is connected to an id of the input.
+            -->
+            <label for="emailtag">Email</label>
+            <input
+                    id="emailtag"
+                    type="email"
+                    name="useremail"
+                    placeholder="Email Here"
+            >
+
+            <!-- br is a break tag, which equates to a newline so the element following will be on a new line -->
+            <br>
+
+            <!--
+            When using a placeholder for a field, faint text will appear in the field displayed with the given
+            value typed into the attribute
+            -->
+            <label for="passwordtag">Password</label>
+            <input
+                    id="passwordtag"
+                    type="password"
+                    name="password"
+                    placeholder="password"
+            >
+
+            <input
+                    type="submit"
+                    value="Submit"
+            >
+
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div class="HTML Forms Selections">
+
+        <h1><u>HTML Forms Selections</u></h1>
+
+        <form method="get">
+
+            <h3>Do you already own a dog?</h3>
+
+            <!--
+            Because the radio buttons below share the same name, they are considered to be connected and therefore
+            only one value can be selected at a time. In this case, that would be either "yes" or "no"
+            -->
+            <label for="yes">Yes: </label>
+            <input id="yes" type="radio" name="dog_choice" value="yes">
+
+            <label for="no">No: </label>
+            <input id="no" type="radio" name="dog_choice" value="no">
+
+
+            <!--
+            The following is a selction list with a few options,
+            the value displayed in the options drop down will not be great, good, or bad, but will instead be 1, 2, or 3
+            when the form is submitted, the values great, good, or bad will be the values associated with 1, 2, or 3
+            -->
+            <p>How clean is your house? (1-3)</p>
+            <select name="stars">
+
+                <option value="Great">3</option>
+                <option value="Good">2</option>
+                <option value="Bad">1</option>
+
+            </select>
+
+            <!--
+            The cols in a text area describes horizontal width, and the rows describes vertical width of the text area
+            This will be displayed as a general text box to the user. This can be automatically resized by the user
+            -->
+            <p>Any other comments?</p>
+            <textarea name="name" id="" cols="80" rows="10"></textarea>
+
+            <input type="submit"
+            value="Submit Feedback">
+            
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div class="Second Assessment">
+
+        <a href="HTML%20Assessment%20Two.html">Assessment 2</a>
+
+    </div>
+
+    <hr>
+
+    <div class="BasicCSS">
+
+        <h1>This is the heading</h1>
+
+        <p>Let's see a list</p>
+
+        <ol>
+
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+
+        </ol>
+
+        <h4>Heading 4</h4>
+
+    </div>
+
+    <hr>
+
+    <div class="CSSBackgroundsAndBorders">
+
+        <p>This is a paragraph. Outside the div!</p>
+
+        <div>
+
+            <p>I'm inside the div</p>
+            <p>Also inside the div</p>
+            <p>Inside the div...<span>in a span</span></p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="CSSClassesAndIDs">
+
+        <h3>I'm an h3 heading</h3>
+
+        <div class="firstDiv">
+
+            <p>I'm inside the first div</p>
+
+        </div>
+
+        <div class="secondDiv">
+
+            <p>I'm inside the second div!</p>
+
+        </div>
+
+        <p id="singledout">I am a unique p outside of the divs!</p>
+
+    </div>
+
+    <hr>
+
+    <div class="CSSFonts">
+
+        <h1 class="fontLectureHeader">Header 1</h1>
+
+        <p class="fontLectureParagraphOne">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error exercitationem harum
+            in incidunt ipsam libero maxime minima necessitatibus nisi quam quas, quasi rerum sapiente sint tenetur
+            ut voluptas voluptatum.
+        </p>
+
+        <p class="fontLectureParagraphTwo">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut eius obcaecati pariatur? Alias, amet,
+            asperiores beatae dicta fugit harum iure mollitia nulla reiciendis rem rerum sunt vel, vero voluptatibus.
+        </p>
+
+    </div>
+
+</body>
+</html>
